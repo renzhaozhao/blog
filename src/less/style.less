@@ -1,0 +1,80 @@
+@charset: "utf-8";
+@import (css) "libs/pure.css";
+@import "libs/config.less";
+@import "libs/function.less";
+@import "libs/helper.less";
+@import "libs/button.less";
+@import "libs/table.less";
+@import "libs/form.less";
+@import "libs/label.less";
+@import "libs/component.less";
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: @font-size;
+    font-family: @font-family;
+}
+
+body{
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.clear{
+    height: 0;
+    font-size: 1px;
+    clear: both;
+    line-height: 0;
+}
+a{
+    color: lighten(@dark-gray,20%);
+    transition: color .3s;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover{
+        color: @dark-gray;
+    }
+}
+.container{
+    padding: 2em;
+    margin: 0 auto;
+}
+.syntaxhighlighter{
+    overflow-y: hidden!important;
+}
+input{
+    color: @black;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(50,50,50,0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+
+

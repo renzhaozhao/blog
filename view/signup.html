@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<title>人找找的博客</title>
+<base href="http://192.168.1.177:3000/">
+<script>
+    var ROOT_URL = 'http://192.168.1.177:3000/';
+    var seajsEnv = {
+        'mode': 'development',
+        'debug': true
+    };
+</script>
+<script src="public/libs/sea.js"></script>
+<script src="public/libs/jquery.js"></script>
+<script src="public/js/config.js"></script>
+<link rel="stylesheet" href="public/css/style.min.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>注册</h2> 
+
+    <form class="pure-form pure-form-aligned signup-form">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="name">用户名</label>
+                <input id="name" type="text" placeholder="请输入用户名" required>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="password">密码</label>
+                <input id="password" type="password" placeholder="请输入密码" required>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="email">邮箱</label>
+                <input id="email" type="email" placeholder="请输入邮箱" required>
+            </div>
+
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-button-primary">立即注册</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    seajs.use("signup")
+</script>
+</body>
+</html>
