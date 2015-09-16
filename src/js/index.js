@@ -19,7 +19,7 @@ define(function(require){
                 url: ROOT_URL +"public/js/signup",
                 data: sInfo,
                 success: function(msg){  
-                    log("注册成功！");
+                    alert("注册成功！");
                     window.location.href = ROOT_URL + "index.html";
                 },
                 error: function(){

@@ -1,0 +1,36 @@
+<% include header.html %>
+
+<div class="container">
+    <h2>登录</h2>
+    <%- message %>
+    <input type="text" id="username"><br>
+    <input type="password" id="password"><br>
+    <button type="button" onclick="login()" class="pure-button">登录</button>
+</div>
+
+<script>
+function login(){
+    var username = $('#username').val();
+    var password = $('#password').val();
+    var data = {"username": username,"password":password};
+    $.ajax({
+        url: '/login',
+        type: 'post',
+        data: data,
+        success: function(data,status){
+            if (status == 'success'){
+                alert('登录成功');
+                location.href = 'home'
+            };
+        },
+        error: function(data,status,e){
+            if (status == 'error'){
+                location.href = 'login'
+            };
+        }
+    })
+    
+}
+</script>
+
+<% include footer.html %>

@@ -49,6 +49,7 @@ define(function(require){
     });
     
     (function(){
+        log("test");
         $(".signup-form").submit(function(e){
             e.preventDefault();
             var sInfo = {
@@ -63,8 +64,8 @@ define(function(require){
                 url: ROOT_URL +"public/js/signup",
                 data: sInfo,
                 success: function(msg){  
-                    log("注册成功！");
-                    window.location.href = ROOT_URL + "index.html";
+                    alert("注册成功！");
+                    window.location.href = ROOT_URL;
                 },
                 error: function(){
                     alert("ajax失败");
