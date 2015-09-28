@@ -1,36 +1,24 @@
 <% include header.html %>
 
-<div class="container">
-    <h2>登录</h2>
-    <%- message %>
-    <input type="text" id="username"><br>
-    <input type="password" id="password"><br>
-    <button type="button" onclick="login()" class="pure-button">登录</button>
-</div>
-
-<script>
-function login(){
-    var username = $('#username').val();
-    var password = $('#password').val();
-    var data = {"username": username,"password":password};
-    $.ajax({
-        url: '/login',
-        type: 'post',
-        data: data,
-        success: function(data,status){
-            if (status == 'success'){
-                alert('登录成功');
-                location.href = 'home'
-            };
-        },
-        error: function(data,status,e){
-            if (status == 'error'){
-                location.href = 'login'
-            };
-        }
-    })
+<div class="user-page">
     
-}
-</script>
+    <form class="pure-form pure-form-aligned" method="post">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="name">用户名</label>
+                <input id="name" name="name" type="text" placeholder="请输入用户名" required>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="password">密码</label>
+                <input id="password" name="password" type="password" placeholder="请输入密码" required>
+            </div>
+
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-button-primary">登录</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
 
 <% include footer.html %>

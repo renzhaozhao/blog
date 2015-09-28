@@ -534,3 +534,14 @@ input {
 ::-webkit-scrollbar-track:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
+.sidebar {
+  padding-top: 5em;
+}
+.sidebar > a {
+  display: block;
+  padding: .5em;
+}
+.content .title {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: .5em;
+}
