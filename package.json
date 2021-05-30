@@ -1,6 +1,6 @@
 {
-  "name": "blog",
-  "version": "0.0.0",
+  "name": "vite-react-deploy",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
