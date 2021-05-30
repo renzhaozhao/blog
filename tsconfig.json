@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "react",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "baseUrl": ".",
+    "paths":{
+      "@/*": ["src/*"]
+    },
+    "outDir": "./dist/out-tsc"
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules"
+  ]
+}
