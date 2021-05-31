@@ -12,6 +12,9 @@ module.exports = {
     'import',
     'prettier',
   ],
+  globals: {
+    web3: true,
+  },
   settings: {
     'import/parsers': {
       // 使用 TypeScript parser
@@ -49,12 +52,6 @@ module.exports = {
         props: false,
       },
     ], // 允许修改函数入参的属性值
-    'no-plusplus': [
-      'error',
-      {
-        allowForLoopAfterthoughts: true,
-      },
-    ], // 允许在for循环的最后一个表达式使用++ --
     'object-curly-newline': [0], // 不检测解构多个分行
     // 'no-undef': [1], // 允许使用未声明变量
     // 'eqeqeq': [0], // 允许使用==
@@ -65,6 +62,7 @@ module.exports = {
     'no-use-before-define': [0], // 允许使用在定义之前使用fuction
     // 'operator-linebreak': [0], // 不使用统一的换行方式，因为jsx里
     radix: [0], // 允许parseInt不传第二个参数
+    'no-plusplus': [0], // 可以使用++ --
 
     // react相关规则
     'react/jsx-filename-extension': [
@@ -88,7 +86,7 @@ module.exports = {
 
     // import相关规则
     'import/no-dynamic-require': [0], // 允许使用require变量
-
+    'import/prefer-default-export': [0],
     'import/extensions': [0], // 不检查扩展名
     // 'linebreak-style': [0, 'error', 'windows'], // 运行window环境
 
