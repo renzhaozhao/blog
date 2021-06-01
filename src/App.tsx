@@ -36,7 +36,7 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div>区块链测试1</div>
+      <div>区块链测试</div>
       <div>余额: </div>
       <div>
         WEI: <span className="balance">{balance}</span>
