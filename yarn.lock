@@ -2208,6 +2208,11 @@ eslint-config-prettier@^8.3.0:
   resolved "https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-8.3.0.tgz?cache=0&sync_timestamp=1619270475218&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-config-prettier%2Fdownload%2Feslint-config-prettier-8.3.0.tgz"
   integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
 
+eslint-config-react@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.npm.taobao.org/eslint-config-react/download/eslint-config-react-1.1.7.tgz#a0918d0fc47d0e9bd161a47308021da85d2585b3"
+  integrity sha1-oJGND8R9DpvRYaRzCAIdqF0lhbM=
+
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
   resolved "https://registry.npm.taobao.org/eslint-import-resolver-node/download/eslint-import-resolver-node-0.3.4.tgz"
@@ -5902,24 +5907,9 @@ web3-eth-accounts@1.3.6:
     web3-core-method "1.3.6"
     web3-utils "1.3.6"
 
-web3-eth-contract@1.3.6:
+web3-eth-contract@1.3.6, web3-eth-contract@^1.3.6:
   version "1.3.6"
   resolved "https://registry.nlark.com/web3-eth-contract/download/web3-eth-contract-1.3.6.tgz?cache=0&sync_timestamp=1620962123141&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fweb3-eth-contract%2Fdownload%2Fweb3-eth-contract-1.3.6.tgz"
-  integrity sha1-zM9NMtxWkX+2kj53hJipuipbqGY=
-  dependencies:
-    "@types/bn.js" "^4.11.5"
-    underscore "1.12.1"
-    web3-core "1.3.6"
-    web3-core-helpers "1.3.6"
-    web3-core-method "1.3.6"
-    web3-core-promievent "1.3.6"
-    web3-core-subscriptions "1.3.6"
-    web3-eth-abi "1.3.6"
-    web3-utils "1.3.6"
-
-web3-eth-contract@^1.3.6:
-  version "1.3.6"
-  resolved "https://registry.nlark.com/web3-eth-contract/download/web3-eth-contract-1.3.6.tgz#cccf4d32dc56917fb6923e778498a9ba2a5ba866"
   integrity sha1-zM9NMtxWkX+2kj53hJipuipbqGY=
   dependencies:
     "@types/bn.js" "^4.11.5"
