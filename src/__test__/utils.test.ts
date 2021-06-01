@@ -1,4 +1,4 @@
-import { toThousand, wei2eth } from '.'
+import { toThousand, wei2eth } from '../utils'
 
 test('「toThousand」0', () => {
   expect(toThousand(0)).toBe('0')
