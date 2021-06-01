@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-deploy:
     # 服务器环境：最新版 Ubuntu
-    runs-on: node:16.2.0-alpine3.13
+    runs-on: ubuntu-latest
     steps:
       # 拉取代码
       - name: Checkout
