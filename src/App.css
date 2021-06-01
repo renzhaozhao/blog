@@ -40,3 +40,11 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.balance {
+  width: 300px;
+  display: inline-block;
+  text-align: left;
+  color: orange;
+  font-size: 24px;
+}
