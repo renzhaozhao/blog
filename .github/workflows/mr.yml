@@ -3,7 +3,8 @@ name: Merge Request
 # 触发条件：在 push 到 master 分支后
 on:
   push:
-    branches: *
+    branches:
+      - master
   pull_request:
     branches:
       - master
@@ -19,6 +20,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+
+      # 缓存依赖项
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
 
       # 安装依赖
       - name: Install
