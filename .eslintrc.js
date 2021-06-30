@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint'],
   globals: {
     web3: true,
   },
