@@ -12,7 +12,7 @@ const md = new Markdown().use(hljs)
 const Post: FC = () => {
   const { id } = useParams()
 
-  const { data, error } = useSWR(`/src/posts/${id}.md`)
+  const { data, error } = useSWR(`/vite-react-deploy/src/posts/${id}.md`)
   if (error) return <div className="container text-center">failed to load</div>
 
   if (!data) return <div className={`container ${styles.info}`}>No Data</div>
