@@ -3,6 +3,7 @@ import useSWR from 'swr'
 import Markdown from 'markdown-it'
 import hljs from 'markdown-it-highlightjs'
 import { useParams } from 'react-router-dom'
+import MdHandle from '@/utils/MdHandle'
 import styles from './styles/post.module.less'
 import 'highlightjs/styles/qtcreator_light.css'
 
@@ -15,13 +16,14 @@ const Post: FC = () => {
   if (error) return <div className="container text-center">failed to load</div>
 
   if (!data) return <div className={`container ${styles.info}`}>No Data</div>
+  const mdHandle = new MdHandle(data)
 
   return (
     <div className={`container ${styles.post}`}>
-      <h1>111sad</h1>
+      <p>{mdHandle.getDate()}</p>
       <div
         dangerouslySetInnerHTML={{
-          __html: md.render(data),
+          __html: md.render(mdHandle.getContent()),
         }}
       />
     </div>
