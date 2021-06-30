@@ -8,10 +8,10 @@ const routes = [
     component: lazy(() => import('@/pages/Home')),
   },
   {
-    path: '/page2',
-    name: 'page2',
+    path: '/post/:id',
+    name: 'post',
     exact: true,
-    component: lazy(() => import('@/pages/Page2')),
+    component: lazy(() => import('@/pages/Post')),
   },
 ]
 

@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'prettier'],
   globals: {
     web3: true,
   },
@@ -44,6 +44,7 @@ module.exports = {
         props: false,
       },
     ], // 允许修改函数入参的属性值
+    'implicit-arrow-linebreak': [0],
     'object-curly-newline': [0], // 不检测解构多个分行
     // 'no-undef': [1], // 允许使用未声明变量
     // 'eqeqeq': [0], // 允许使用==

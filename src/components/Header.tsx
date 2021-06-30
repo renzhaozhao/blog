@@ -14,8 +14,8 @@ const Header: FC = () => (
         <NavLink to="/" exact>
           首页
         </NavLink>
-        <NavLink to="/page2" exact>
-          PAGE2
+        <NavLink to="/post" exact>
+          Post
         </NavLink>
       </nav>
     </div>
