@@ -1,0 +1,42 @@
+.header {
+  // box-shadow: 3px 5px 3px #333;
+  border-bottom: 1px solid @borderColor;
+}
+
+.content {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  text-decoration: none;
+  color: @fontColor;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 20px;
+
+  &.active {
+    color: @mainColor;
+  }
+}
+
+.nav a.active {
+  color: @mainColor;
+}
