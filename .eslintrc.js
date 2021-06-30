@@ -5,13 +5,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'jsx-a11y', // 交互相关
-    'import',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'prettier'],
   globals: {
     web3: true,
   },
@@ -29,7 +23,7 @@ module.exports = {
     },
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -37,8 +31,6 @@ module.exports = {
     },
   },
   rules: {
-    // 额外规则
-    'prettier/prettier': ['error'],
     // js相关规则
     semi: ['error', 'never'], // 禁止使用末尾分号
     'comma-dangle': [0], // 尾随逗号
@@ -52,6 +44,7 @@ module.exports = {
         props: false,
       },
     ], // 允许修改函数入参的属性值
+    'implicit-arrow-linebreak': [0],
     'object-curly-newline': [0], // 不检测解构多个分行
     // 'no-undef': [1], // 允许使用未声明变量
     // 'eqeqeq': [0], // 允许使用==
