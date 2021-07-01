@@ -1,12 +1,14 @@
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import useSWR from 'swr'
+import { ROUTE_PATH } from '@/routes'
 import styles from './styles/home.module.less'
 
 const Home: FC = () => {
   const { data, error } = useSWR(
-    '/vite-react-deploy/src/posts/posts.json',
+    `${ROUTE_PATH}posts/posts.json`,
     url => fetch(url).then(res => res.json())
+    // 占位
   )
   if (error) return <div className="container">failed to load</div>
 
