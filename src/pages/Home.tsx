@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import useSWR from 'swr'
-import { ROUTE_PATH } from '@/routes'
+import { ROUTE_PATH } from '@/config'
 import styles from './styles/home.module.less'
 
 const Home: FC = () => {

@@ -1,7 +1,5 @@
 import { lazy } from 'react'
 
-export const ROUTE_PATH = import.meta.env.VITE_ROUTE_PATH
-
 const routes = [
   {
     path: '/',

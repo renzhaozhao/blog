@@ -4,7 +4,7 @@ import Markdown from 'markdown-it'
 import hljs from 'markdown-it-highlightjs'
 import { useParams } from 'react-router-dom'
 import MdHandle from '@/utils/MdHandle'
-import { ROUTE_PATH } from '@/routes'
+import { ROUTE_PATH } from '@/config'
 import styles from './styles/post.module.less'
 import 'highlightjs/styles/qtcreator_light.css'
 
@@ -13,7 +13,7 @@ const md = new Markdown().use(hljs)
 const Post: FC = () => {
   const { id } = useParams()
   const { data, error } = useSWR(
-    `${ROUTE_PATH}posts/${id}.md`,
+    `${ROUTE_PATH}posts/${decodeURI(id)}.md`,
     url => fetch(url).then(res => res.text())
     // 占位
   )
