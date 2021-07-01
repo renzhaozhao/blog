@@ -5,7 +5,7 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vite-react-deploy/',
+  base: '/blog/',
   // 路径别名
   resolve: {
     alias: {
