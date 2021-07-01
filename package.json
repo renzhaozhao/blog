@@ -8,7 +8,8 @@
     "test": "jest --coverage",
     "lint": "eslint --fix --ext .ts,.tsx,.js src/",
     "deploy": "./deploy.sh",
-    "new": "node new"
+    "new": "node new",
+    "ci": "yarn install --frozen-lockfile"
   },
   "dependencies": {
     "bignumber.js": "^9.0.1",

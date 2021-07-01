@@ -34,7 +34,7 @@ jobs:
 
       # 安装依赖
       - name: Install
-        run: yarn
+        run: npm run ci
 
       # 单元测试
       - name: Test
