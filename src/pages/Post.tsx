@@ -13,7 +13,7 @@ const md = new Markdown().use(hljs)
 const Post: FC = () => {
   const { id } = useParams()
   const { data, error } = useSWR(
-    `${ROUTE_PATH}posts/${decodeURI(id)}.md`,
+    encodeURI(`${ROUTE_PATH}posts/${decodeURI(id)}.md`),
     url => fetch(url).then(res => res.text())
     // 占位
   )
