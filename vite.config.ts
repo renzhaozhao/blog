@@ -18,6 +18,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
+          markdown: ['markdown-it', 'markdown-it-highlightjs'],
         },
       },
     },
